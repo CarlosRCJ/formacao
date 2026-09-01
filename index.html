@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Inglês - 6º Ano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="screen active">
+            <h1>English Quiz - 6º Ano</h1>
+            <p>Desafio de Língua Inglesa: responda a 20 questões sorteadas do banco de questões.</p>
+            <button id="start-btn" class="btn" disabled>Carregando perguntas...</button>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <span id="question-num">Questão 1/20</span>
+                <span id="topic" class="topic-badge">Tópico</span>
+            </div>
+            
+            <div id="question-text" class="question-text">Pergunta...</div>
+            
+            <div id="options-container" class="options-grid">
+                <!-- Opções inseridas via JS -->
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="next-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+        </div>
+
+        <!-- Tela Final -->
+        <div id="result-screen" class="screen">
+            <h1>Resultado Final</h1>
+            <div class="score-card" id="final-score">0 de 20 acertos</div>
+            <p id="result-message"></p>
+            <button id="restart-btn" class="btn">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <script src="js/questoes.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
